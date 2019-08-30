@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "{{ artifact-id }}-cli",
+    "{{ artifact-id }}-lib",
+]

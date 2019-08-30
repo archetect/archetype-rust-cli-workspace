@@ -1,0 +1,26 @@
+description = "A Rust CLI archetype"
+authors = ["Jimmie Fulton <jimmie.fulton@gmail.com"]
+languages = ["Rust"]
+frameworks = ["Clap"]
+tags = ["CLI", "Workspace"]
+
+[[variables]]
+variable = 'name'
+prompt = 'Application Name: '
+
+[[variables]]
+variable = 'author_full'
+prompt = 'Full Author: '
+
+[[variables]]
+variable = 'author'
+prompt = 'User ID: '
+
+
+[[variables]]
+variable = "artifact-id"
+value = "{{ name | train_case }}"
+
+[[variables]]
+variable = "artifact_id"
+value = "{{ name | snake_case }}"
