@@ -1,0 +1,23 @@
+---
+description: "A Rust CLI archetype"
+authors: ["Jimmie Fulton <jimmie.fulton@gmail.com"]
+languages: ["Rust"]
+frameworks: ["Clap"]
+tags: ["CLI", "Workspace"]
+
+variables:
+  name:
+    prompt: 'Application Name: '
+
+  author_full:
+    prompt: 'Full Author: '
+
+  author:
+    prompt: 'User ID: '
+
+
+  artifact-id:
+    value: "{{ name | train_case }}"
+
+  artifact_id:
+    value: "{{ name | snake_case }}"
