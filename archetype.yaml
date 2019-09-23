@@ -21,3 +21,8 @@ variables:
 
   artifact_id:
     value: "{{ name | snake_case }}"
+
+modules:
+  - template:
+      source: "contents"
+      
