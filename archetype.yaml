@@ -5,24 +5,25 @@ languages: ["Rust"]
 frameworks: ["Clap"]
 tags: ["CLI", "Workspace"]
 
-variables:
-  name:
-    prompt: 'Application Name: '
+script:
+  - set:
+      name:
+        prompt: 'Application Name: '
 
-  author_full:
-    prompt: 'Full Author: '
+      author_full:
+        prompt: 'Full Author: '
 
-  author:
-    prompt: 'User ID: '
+      author:
+        prompt: 'User ID: '
 
+      artifact-id:
+        value: "{{ name | train_case }}"
 
-  artifact-id:
-    value: "{{ name | train_case }}"
+      artifact_id:
+        value: "{{ name | snake_case }}"
 
-  artifact_id:
-    value: "{{ name | snake_case }}"
+  - render:
+      directory:
+        source: "contents"
 
-modules:
-  - template:
-      source: "contents"
       
